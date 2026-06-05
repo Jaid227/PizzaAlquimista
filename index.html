@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Pizza Alquimista | La pizza con magia</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Imagen de fondo fija -->
+    <div class="bg-image"></div>
+    <div class="bg-overlay"></div>
+
+    <!-- Botón Modo Nocturno/Claro -->
+    <button id="themeToggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+
+    <!-- Contenido principal -->
+    <main class="content">
+        <!-- Sección principal con oferta y bola de precio -->
+        <div class="hero-section">
+            <div class="price-bubble">
+                <div class="bubble-inner">
+                    <span class="price-label">DESDE</span>
+                    <span class="price-value">$120</span>
+                    <span class="price-unit">MXN</span>
+                </div>
+                <div class="bubble-spikes"></div>
+            </div>
+            <div class="hero-text">
+                <h1 class="pizzeria-name">PIZZA ALQUIMISTA</h1>
+                <p class="slogan">Transformamos ingredientes en magia 🍕✨</p>
+            </div>
+        </div>
+
+        <!-- Sección de selección de pizzas con cantidades -->
+        <section class="pizzas-seleccion">
+            <h2 class="seleccion-titulo"><i class="fas fa-magic"></i> Elige tus pizzas</h2>
+            <div class="pizzas-grid-con-cantidad">
+                <!-- Pizza Hawaiana -->
+                <div class="pizza-item" data-pizza="Hawaiana" data-precio="129">
+                    <div class="pizza-imagen">
+                        <img src="imagenes/hawaiana.jpeg" alt="Pizza Hawaiana" onerror="this.src='https://picsum.photos/id/106/300/200'">
+                    </div>
+                    <div class="pizza-info">
+                        <h3>Hawaiana</h3>
+                        <p class="precio-pizza">$120 MXN</p>
+                        <div class="cantidad-control">
+                            <button class="btn-cantidad menos" data-pizza="Hawaiana">-</button>
+                            <span class="cantidad-numero" id="cant-Hawaiana">0</span>
+                            <button class="btn-cantidad mas" data-pizza="Hawaiana">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Peperoni -->
+                <div class="pizza-item" data-pizza="Peperoni" data-precio="139">
+                    <div class="pizza-imagen">
+                        <img src="imagenes/peperoni.jpeg" alt="Pizza Peperoni" onerror="this.src='https://picsum.photos/id/108/300/200'">
+                    </div>
+                    <div class="pizza-info">
+                        <h3>Peperoni</h3>
+                        <p class="precio-pizza">$120 MXN</p>
+                        <div class="cantidad-control">
+                            <button class="btn-cantidad menos" data-pizza="Peperoni">-</button>
+                            <span class="cantidad-numero" id="cant-Peperoni">0</span>
+                            <button class="btn-cantidad mas" data-pizza="Peperoni">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Méxicana -->
+                <div class="pizza-item" data-pizza="Méxicana" data-precio="149">
+                    <div class="pizza-imagen">
+                        <img src="imagenes/mexicana.jpeg" alt="Pizza Méxicana" onerror="this.src='https://picsum.photos/id/127/300/200'">
+                        <div class="pizza-info">
+                            <h3>Méxicana</h3>
+                            <p class="precio-pizza">$120 MXN</p>
+                            <div class="cantidad-control">
+                                <button class="btn-cantidad menos" data-pizza="Méxicana">-</button>
+                                <span class="cantidad-numero" id="cant-Méxicana">0</span>
+                                <button class="btn-cantidad mas" data-pizza="Méxicana">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Pastor -->
+                <div class="pizza-item" data-pizza="Pastor" data-precio="159">
+                    <div class="pizza-imagen">
+                        <img src="imagenes/pastor.jpeg" alt="Pizza Pastor" onerror="this.src='https://picsum.photos/id/145/300/200'">
+                    </div>
+                    <div class="pizza-info">
+                        <h3>Pastor</h3>
+                        <p class="precio-pizza">$120 MXN</p>
+                        <div class="cantidad-control">
+                            <button class="btn-cantidad menos" data-pizza="Pastor">-</button>
+                            <span class="cantidad-numero" id="cant-Pastor">0</span>
+                            <button class="btn-cantidad mas" data-pizza="Pastor">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="continuarBtn" class="btn-continuar">📋 CONTINUAR CON MI PEDIDO</button>
+        </section>
+
+        <!-- Sección de Referencias de Clientes -->
+        <section class="testimonios">
+            <h2><i class="fas fa-star"></i> Lo que dicen nuestros clientes <i class="fas fa-star"></i></h2>
+            <div class="testimonios-grid">
+                <div class="testimonio-card">
+                    <i class="fas fa-user-circle"></i>
+                    <p>"La mejor pizza de la ciudad, ingredientes frescos y entrega rápida"</p>
+                    <span>- Ana G.</span>
+                </div>
+                <div class="testimonio-card">
+                    <i class="fas fa-user-circle"></i>
+                    <p>"La Hawaiana es espectacular, volveré a pedir sin dudarlo"</p>
+                    <span>- Carlos M.</span>
+                </div>
+                <div class="testimonio-card">
+                    <i class="fas fa-user-circle"></i>
+                    <p>"Excelente servicio, la pizza Méxicana es perfecta"</p>
+                    <span>- Jaid Lozano.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="https://jaid227.github.io/EntropiaDigital/" target="_blank" id="copyrightLink">
+                © 2026 Mandrágora Entrópica | Desarrollo Web Estratégico
+            </a>
+        </footer>
+    </main>
+
+    <!-- Modal de Resumen de Pedido -->
+    <div id="resumenModal" class="modal">
+        <div class="modal-content resumen-content">
+            <span class="close-resumen">&times;</span>
+            <h2><i class="fas fa-shopping-cart"></i> MI PEDIDO</h2>
+            <div id="listaResumenPedido" class="lista-resumen">
+                <p class="vacio">No has seleccionado pizzas</p>
+            </div>
+            <div class="total-resumen">
+                <strong>TOTAL: <span id="totalResumen">$0</span></strong>
+            </div>
+            <button id="confirmarPedidoBtn" class="btn-confirmar-pedido">✅ CONFIRMAR PEDIDO</button>
+            <button id="seguirEditandoBtn" class="btn-seguir-editando">🛒 SEGUIR EDITANDO</button>
+        </div>
+    </div>
+
+    <!-- Modal de Datos del Cliente (Nombre, Dirección, Referencia - TODOS OBLIGATORIOS) -->
+    <div id="datosEnvioModal" class="modal">
+        <div class="modal-content envio-form">
+            <span class="close-envio">&times;</span>
+            <h2>📍 Datos del cliente</h2>
+            <div class="form-group">
+                <label><i class="fas fa-user"></i> Nombre: <span class="obligatorio">*</span></label>
+                <input type="text" id="nombreInput" placeholder="Ej: Juan Pérez García" required>
+            </div>
+            <div class="form-group">
+                <label><i class="fas fa-map-marker-alt"></i> Dirección completa: <span class="obligatorio">*</span></label>
+                <input type="text" id="direccionInput" placeholder="Calle, número, colonia, ciudad..." required>
+            </div>
+            <div class="form-group">
+                <label><i class="fas fa-info-circle"></i> Referencia: <span class="obligatorio">*</span></label>
+                <input type="text" id="referenciaInput" placeholder="Entre calles, color de casa, cerca de..." required>
+            </div>
+            <button id="enviarWhatsappBtn" class="btn-whatsapp-final">📲 ENVIAR PEDIDO</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
